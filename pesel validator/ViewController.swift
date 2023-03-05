@@ -13,7 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var peselTextField: UITextField!
     @IBAction func submitButtonPressed(_ sender: UIButton) {
+        let peselArr = peselTextField.text!.map { Int(String($0))! }
         print(checkPesel(peselTextField.text!))
+        print(getDate(peselArr))
+        print(getGender(peselArr))
     }
     
     
@@ -46,6 +49,15 @@ class ViewController: UIViewController {
         if checkDigit == peselArr[10] { return results[2] }
         return results[1]
     }
+    func getDate(_ pesel: [Int]) -> String {
+        let monthLenght = pesel[2] % 2 == 0 ? monthSingleDigit[String(pesel[3])]! : monthTwoDigit[String(pesel[3])]!
+        return "\(year[String(pesel[2])]!)\(pesel[0])\(pesel[1])-\(monthLenght)-\(pesel[4])\(pesel[5])"
+    }
+    
+    func getGender(_ pesel: [Int]) -> String {
+        return pesel[9] % 2 == 0 ? "kobieta" : "mężczyzna"
+    }
+    
 
 }
 
