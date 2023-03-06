@@ -9,20 +9,25 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
+    
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var peselTextField: UITextField!
     @IBAction func submitButtonPressed(_ sender: UIButton) {
+        peselTextField.endEditing(true)
         let peselArr = peselTextField.text!.map { Int(String($0))! }
-        print(checkPesel(peselTextField.text!))
-        print(getDate(peselArr))
-        print(getGender(peselArr))
+//        peselTextField.text?.isEmpty ?? true 
+        if peselTextField.text?.count != 11  {
+            print(results[0].message)
+        } else {
+            print(checkPesel(peselTextField.text!))
+            print(getDate(peselArr))
+            print(getGender(peselArr))
+        }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     var sum = 0
@@ -32,9 +37,9 @@ class ViewController: UIViewController {
     let monthSingleDigit = ["1": "01", "2": "02", "3": "03", "4": "04", "5": "05", "6": "06", "7": "07", "8": "08", "9": "09"]
     let monthTwoDigit = ["0": "10", "1": "11", "2": "12"]
     let results = [
-        (status: false, message: "Pesel musi składać się z 11 cyfr"),
-        (status: false, message: "Pesel nieprawidłowy"),
-        (status: true, message: "Pesel prawidłowy")
+        (status: false, message: "The PESEL must consist of 11 digits"),
+        (status: false, message: "PESEL incorrect"),
+        (status: true, message: "PESEL correct")
     ]
     
     func checkPesel(_ pesel: String) -> (status: Bool, message: String) {
@@ -49,15 +54,19 @@ class ViewController: UIViewController {
         if checkDigit == peselArr[10] { return results[2] }
         return results[1]
     }
+    
     func getDate(_ pesel: [Int]) -> String {
         let monthLenght = pesel[2] % 2 == 0 ? monthSingleDigit[String(pesel[3])]! : monthTwoDigit[String(pesel[3])]!
         return "\(year[String(pesel[2])]!)\(pesel[0])\(pesel[1])-\(monthLenght)-\(pesel[4])\(pesel[5])"
     }
     
+    
     func getGender(_ pesel: [Int]) -> String {
-        return pesel[9] % 2 == 0 ? "kobieta" : "mężczyzna"
+        return pesel[9] % 2 == 0 ? "woman" : "man"
     }
     
-
+    
 }
+
+
 
