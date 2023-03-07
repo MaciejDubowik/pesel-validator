@@ -39,24 +39,26 @@ final class pesel_validatorTests: XCTestCase {
         XCTAssertEqual(result.message, "The PESEL must consist of 11 digits")
         XCTAssertFalse(result.status)
     }
+    
+    func testPeselHasInvalidChecksum(){
+    let pesel = ViewController()
+    let result = pesel.checkPesel("94011041831")
+    XCTAssertFalse(result.status)
+    }
+    
     func testTextFieldConsistLessThan11Digits(){
         let pesel = ViewController()
         let result = pesel.checkPesel("1232143")
         XCTAssertEqual(result.message, "The PESEL must consist of 11 digits")
         XCTAssertFalse(result.status)
     }
-//    func testTextFieldContainsOnlyDigits(){
-//        let pesel = ViewController()
-//        let textField = pesel.peselTextField
-//        textField?.text = "12345678912"
-//        XCTAssertTrue(textField!.text?.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil, "Text field should only contain digits")
-//    }
-//    func testLetterInTextField(){
-//        let pesel = ViewController()
-//        let textField = pesel.peselTextField
-//        textField?.text = "1234567d912"
-//        XCTAssertFalse(textField!.text?.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil, "Text field should not contain non-digit characters")
-//    }
+    func testTextFieldContainsOnlyDigits(){
+        let peseltextField = UITextField()
+        peseltextField.text = "12345678912"
+        print(peseltextField.text!)
+        XCTAssertTrue(peseltextField.text?.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil, "Text field should only contain digits")
+
+    }
     
     func testPeselIsValid(){
         let pesel = ViewController()
@@ -90,5 +92,7 @@ final class pesel_validatorTests: XCTestCase {
         XCTAssertEqual(date, "1948-11-24")
         XCTAssertEqual(gender, "man")
     }
+    
+    
 
 }
