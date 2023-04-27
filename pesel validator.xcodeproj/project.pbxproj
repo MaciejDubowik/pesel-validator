@@ -16,6 +16,9 @@
 		0E783B6329B3E65A00F9C650 /* pesel_validatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E783B6229B3E65A00F9C650 /* pesel_validatorTests.swift */; };
 		0E783B6D29B3E65A00F9C650 /* pesel_validatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E783B6C29B3E65A00F9C650 /* pesel_validatorUITests.swift */; };
 		0E783B6F29B3E65A00F9C650 /* pesel_validatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E783B6E29B3E65A00F9C650 /* pesel_validatorUITestsLaunchTests.swift */; };
+		0E897D2E29FA67460057225E /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 0E897D2D29FA67460057225E /* Gemfile */; };
+		0E897D3129FA68AC0057225E /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = 0E897D3029FA68AC0057225E /* Fastfile */; };
+		0E897D3329FA693C0057225E /* Scanfile in Resources */ = {isa = PBXBuildFile; fileRef = 0E897D3229FA693C0057225E /* Scanfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		0E783B6829B3E65A00F9C650 /* pesel validatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pesel validatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E783B6C29B3E65A00F9C650 /* pesel_validatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pesel_validatorUITests.swift; sourceTree = "<group>"; };
 		0E783B6E29B3E65A00F9C650 /* pesel_validatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pesel_validatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0E897D2D29FA67460057225E /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		0E897D3029FA68AC0057225E /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
+		0E897D3229FA693C0057225E /* Scanfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Scanfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,8 @@
 		0E783B3F29B3E65800F9C650 = {
 			isa = PBXGroup;
 			children = (
+				0E897D2F29FA68870057225E /* Fastlane */,
+				0E897D2D29FA67460057225E /* Gemfile */,
 				0E783B4A29B3E65800F9C650 /* pesel validator */,
 				0E783B6129B3E65A00F9C650 /* pesel validatorTests */,
 				0E783B6B29B3E65A00F9C650 /* pesel validatorUITests */,
@@ -125,6 +133,15 @@
 				0E783B6E29B3E65A00F9C650 /* pesel_validatorUITestsLaunchTests.swift */,
 			);
 			path = "pesel validatorUITests";
+			sourceTree = "<group>";
+		};
+		0E897D2F29FA68870057225E /* Fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				0E897D3029FA68AC0057225E /* Fastfile */,
+				0E897D3229FA693C0057225E /* Scanfile */,
+			);
+			path = Fastlane;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +248,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E897D3129FA68AC0057225E /* Fastfile in Resources */,
+				0E897D2E29FA67460057225E /* Gemfile in Resources */,
 				0E783B5829B3E65A00F9C650 /* LaunchScreen.storyboard in Resources */,
+				0E897D3329FA693C0057225E /* Scanfile in Resources */,
 				0E783B5529B3E65A00F9C650 /* Assets.xcassets in Resources */,
 				0E783B5329B3E65800F9C650 /* Main.storyboard in Resources */,
 			);
