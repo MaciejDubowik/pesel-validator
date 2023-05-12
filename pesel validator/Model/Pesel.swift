@@ -22,6 +22,8 @@ struct Pesel {
     
     
     func checkPesel() -> (status: Bool, message: String) {
+        if peselValue.count > 11 {return results[1]}
+        
         var sum = 0
         
         peselValue.enumerated().forEach { (index, element) in
