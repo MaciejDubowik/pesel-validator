@@ -19,9 +19,13 @@ class MainViewController: UIViewController {
             print("nil value")
             return
         }
-        
+        guard text.allSatisfy({ $0.isNumber }) else {
+            resultLabel.text = "PESEL should contain only numbers."
+            resultLabel.textColor = UIColor.red
+            return
+        }
         let peselArr = text.map { Int(String($0))! }
-        var pesel = Pesel(peselValue: peselArr)
+        var pesel = PeselValidator(peselValue: peselArr)
         
         if peselTextField.text?.count != 11 || pesel.checkPesel().status == false {
             resultLabel.text = pesel.checkPesel().message

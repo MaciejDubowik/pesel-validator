@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0E20E5E52A0EDA8F004EBBB8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20E5E42A0EDA8F004EBBB8 /* ResultViewController.swift */; };
-		0E5C47F32A0AF34800936AB7 /* Pesel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5C47F22A0AF34800936AB7 /* Pesel.swift */; };
+		0E20E5E72A0F904F004EBBB8 /* PeselValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E20E5E62A0F904F004EBBB8 /* PeselValidatorTests.swift */; };
+		0E5C47F32A0AF34800936AB7 /* PeselValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5C47F22A0AF34800936AB7 /* PeselValidator.swift */; };
 		0E783B4C29B3E65800F9C650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E783B4B29B3E65800F9C650 /* AppDelegate.swift */; };
 		0E783B4E29B3E65800F9C650 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E783B4D29B3E65800F9C650 /* SceneDelegate.swift */; };
 		0E783B5029B3E65800F9C650 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E783B4F29B3E65800F9C650 /* MainViewController.swift */; };
 		0E783B5329B3E65800F9C650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E783B5129B3E65800F9C650 /* Main.storyboard */; };
 		0E783B5529B3E65A00F9C650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E783B5429B3E65A00F9C650 /* Assets.xcassets */; };
-		0E783B6329B3E65A00F9C650 /* pesel_validatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E783B6229B3E65A00F9C650 /* pesel_validatorTests.swift */; };
 		0E783B6D29B3E65A00F9C650 /* pesel_validatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E783B6C29B3E65A00F9C650 /* pesel_validatorUITests.swift */; };
 		0E783B6F29B3E65A00F9C650 /* pesel_validatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E783B6E29B3E65A00F9C650 /* pesel_validatorUITestsLaunchTests.swift */; };
 		0E897D2E29FA67460057225E /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = 0E897D2D29FA67460057225E /* Gemfile */; };
@@ -41,7 +41,8 @@
 
 /* Begin PBXFileReference section */
 		0E20E5E42A0EDA8F004EBBB8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		0E5C47F22A0AF34800936AB7 /* Pesel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pesel.swift; sourceTree = "<group>"; };
+		0E20E5E62A0F904F004EBBB8 /* PeselValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeselValidatorTests.swift; sourceTree = "<group>"; };
+		0E5C47F22A0AF34800936AB7 /* PeselValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeselValidator.swift; sourceTree = "<group>"; };
 		0E783B4829B3E65800F9C650 /* pesel validator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pesel validator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E783B4B29B3E65800F9C650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E783B4D29B3E65800F9C650 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		0E783B5429B3E65A00F9C650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E783B5929B3E65A00F9C650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E783B5E29B3E65A00F9C650 /* pesel validatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pesel validatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E783B6229B3E65A00F9C650 /* pesel_validatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pesel_validatorTests.swift; sourceTree = "<group>"; };
 		0E783B6829B3E65A00F9C650 /* pesel validatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pesel validatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E783B6C29B3E65A00F9C650 /* pesel_validatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pesel_validatorUITests.swift; sourceTree = "<group>"; };
 		0E783B6E29B3E65A00F9C650 /* pesel_validatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pesel_validatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		0E5C47EF2A0AC25E00936AB7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0E5C47F22A0AF34800936AB7 /* Pesel.swift */,
+				0E5C47F22A0AF34800936AB7 /* PeselValidator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,7 +148,7 @@
 		0E783B6129B3E65A00F9C650 /* pesel validatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				0E783B6229B3E65A00F9C650 /* pesel_validatorTests.swift */,
+				0E20E5E62A0F904F004EBBB8 /* PeselValidatorTests.swift */,
 			);
 			path = "pesel validatorTests";
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 				0E783B5029B3E65800F9C650 /* MainViewController.swift in Sources */,
 				0E783B4C29B3E65800F9C650 /* AppDelegate.swift in Sources */,
 				0E783B4E29B3E65800F9C650 /* SceneDelegate.swift in Sources */,
-				0E5C47F32A0AF34800936AB7 /* Pesel.swift in Sources */,
+				0E5C47F32A0AF34800936AB7 /* PeselValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E783B6329B3E65A00F9C650 /* pesel_validatorTests.swift in Sources */,
+				0E20E5E72A0F904F004EBBB8 /* PeselValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

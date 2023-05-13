@@ -123,14 +123,14 @@ It checks compliance with format, date of birth, and gender, reducing identity f
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hae-8L-BOU">
-                                <rect key="frame" x="16" y="650" width="361" height="112"/>
+                                <rect key="frame" x="16" y="612" width="361" height="112"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.66851949690000001" green="0.79004329439999998" blue="0.91766411069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Back">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="32"/>
-                                    <color key="baseForegroundColor" systemColor="systemGrayColor"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="9qC-rb-ohZ" eventType="touchUpInside" id="5IQ-wd-H3C"/>
@@ -138,7 +138,7 @@ It checks compliance with format, date of birth, and gender, reducing identity f
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ye4-Q5-DGm"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.66851949690000001" green="0.79004329439999998" blue="0.91766411069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
                         <outlet property="birthLabel" destination="PMD-XS-kYi" id="k5n-6h-u2Q"/>
@@ -152,8 +152,8 @@ It checks compliance with format, date of birth, and gender, reducing identity f
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

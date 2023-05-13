@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct Pesel {
-    
+struct PeselValidator {
     let peselValue: [Int]
     let weights = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3]
     let year = ["0": "19", "1": "19", "2": "20", "3": "20", "4": "21", "5": "21", "6": "22", "7": "22", "8": "18", "9": "18"]
@@ -22,7 +21,7 @@ struct Pesel {
     
     
     func checkPesel() -> (status: Bool, message: String) {
-        if peselValue.count > 11 {return results[1]}
+        if peselValue.count != 11 {return results[0]}
         
         var sum = 0
         
@@ -32,7 +31,6 @@ struct Pesel {
         }
         let checkDigit = 10 - (sum % 10)
         
-        if peselValue.count != 11 { return results[0] }
         if checkDigit != peselValue[10] { return results[1] }
         return results[2]
     }
@@ -43,6 +41,6 @@ struct Pesel {
     }
     
     func getGender() -> String {
-        return  peselValue[9] % 2 == 0 ? "woman" : "man"
+        return  peselValue[9] % 2 == 0 ? "female" : "male"
     }
 }
